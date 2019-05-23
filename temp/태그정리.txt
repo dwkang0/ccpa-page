@@ -1,0 +1,58 @@
+태그 정리
+<body> 태그(보이는 것들이 주로 들어간다.)
+<span> - 특별한 기능을 가지고 있지 않고, CSS와 함께 쓰인다. 가상의 레이아웃을 설계한다.
+         <div>와 비슷하지만 <div>는 줄 바꿈이되고(block),<span>은 되지 않는다(inline)
+<i> - italic, CSS에서 font-style을 italic으로 설정한것과 같다.
+
+<h(1-6)> - 제목
+<br> - 줄바꿈(닫지 않는다. 다른 닫지 않는 태그 예시 - <img>,<input>,<br>,<hr,<meta>)
+<p> - paragraph, 단락 태그 - <br>과 다르게 닫는다.(CSS로 이용하는 것이 가능해 권장된다.)
+<a> - 하이퍼링크 태그 -
+      href : 클릭시 이동하는 링크
+      target : 링크 여는 방법
+      _self: 현재 페이지 (기본값)
+      _blank: 새 탭
+      _parent: 부모 페이지로, iframe 등이 사용된 환경에서 쓰입니다.
+      _ top: 최상위 페이지로, iframe 등이 사용된 환경에서 쓰입니다.
+      프레임이름: 직접 프레임이름을 명시해서 사용할 수도 있습니다.
+
+<img> - 이미지 태그 -
+    src: 이미지의 경로
+    width: 이미지 가로 크기
+    height: 이미지 세로 크기
+<table> - 표를 만드는 태그
+    <tr> 태그는 표의 열을 나타냅니다.
+    <td> 태그는 표의 행을 나타내며, <tr> 태그 하위에 위치합니다.
+    <thead> - 제목줄을 나타낸다.
+    <rowspan>, <colspan> - 셀 병합 태그 각각 열,행을 확장한다.
+    (웹페이지의 레이아웃을 구성하기는 권장되지 않는다.)
+<li> - list, 이 태그는 단독으로 쓰이지 않으며 <ul></li> 혹은 <ol></ol> 태그 내부에 들어갑니다.
+
+    <ol> 태그는 번호를 메겨 순서가 있는 (ordered list) 목록을 만듭니다.
+    <ul> 태그는 순서없이 모양으로 (unordered list) 목록을 만듭니다.
+
+<li> 태그는 단순히 리스트 나열 뿐만 아니라 메뉴등을 만들때도 사용합니다.
+이중 리스트를 만들기 위해서는 <ul>이나 <ol>하위에 다시 <ul>이나 <ol> 태그를 쓰면 됩니다.
+
+<form> - 입력양식, <input>,<select>,<option>으로 나뉜다.
+<input> - 입력태그 type 속성을 통해 종류를 나타내며, name을 통해 데이터의 이름, value를 통해 기본 값을 지정합니다.
+text: 일반 문자
+password: 비밀번호
+button: 버튼
+submit: 양식 제출용 버튼
+reset: 양식 초기화용 버튼
+radio: 한개만 선택할 수 있는 컴포넌트
+checkbox: 다수를 선택할 수 있는 컴포넌트
+file: 파일 업로드
+hidden: 사용자에게 보이지 않는 숨은 요소
+(HTML5에 더 많은 태그가 추가되었다.)
+<select>, <option>(하위) - 드롭다운 리스트를 만든다.
+<u> - underline, 밑줄
+<strong> - 강조 표시
+
+<head> 태그 - 웹페이지의 숨겨진 데이터를 나타내는 태그이다.
+<title> - 웹페이지의 제목을 나타내고, 본문에는 보이지 않는다.
+<meta> - 닫는 태그가 없는 태그. 페이지의 설명 요약, 핵심 키워드, 제작자, 크롤링 정책등 많은 정보를 제공한다.
+SEO - Search Engine Optimization, 검색엔진 최적화.
+<meta /> 태그를 이용하여 description, keywords, author, subject, classification,charset 등의 정보를 표기할 수 있으며,
+검색 엔진은 이런 정보를 적극적으로 활용합니다.
