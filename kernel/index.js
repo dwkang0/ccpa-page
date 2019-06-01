@@ -1,27 +1,36 @@
-var http = require('http');
-var fs = require('fs');
-var path = require("path");
-var url = require('url');
+console.log("start server");
+console.log("initalizing...");
+/////////////////////////////////////////
+//include//
+////////////////////////////////////////
+const express = require('express');
+const bodyParser = require('body-parser');
+const session = require('express-session');
+const fs =  require("fs");
+////////////////////////////////////////
 
-http.createServer(function(request, response){
-  var pathname = url.parse(request.url).pathname;
+//load config
+var configData = fs.readFileSync(__dirname+"/data/config.json", 'utf8');
+var config = JSON.parse(configData);
 
-  console.log("request for "+pathname+" received.");
+//make app
+const app = express();
 
-  if(pathname=='/'){
-    pathname = "/Login_page_test.html";
-  }
-  fs.readFile(pathname.substr(1), function(err, data){
-    if(err){
-      console.log(err);
-      response.writeHead(404, {'Content-Type' : 'text/html'});
-    }else{
-      response.writeHead(200, {'Content-Type': 'text/html'});
+//json init
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
 
-      response.write(data.toString());
-    }
-    response.end();
-  });
-}).listen(8081);
+//set jwt and jwt key
+app.set('jwt-secret', config['secret']);
 
-console.log("Server running at http://127.0.0.1:8081");
+app.set('views', __dirname);
+app.set('view engine', 'ejs');
+app.engine('html', require('ejs').renderFile);
+
+var server = app.listen(config['port'], function(){
+  console.log("Express server has started on port "+config['port']);
+});
+
+app.use(express.static('.'));
+
+var router = require(__dirname+'/router/main')(app, fs);
