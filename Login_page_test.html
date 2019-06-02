@@ -81,7 +81,7 @@
       <input type="checkbox"> 입력 정보를 기억합니다.
     </label>
   </div>
-  <button type="submit" class="btn btn-primary">로그인</button>
+  <button type="submit" class="btn btn-primary" onclick="loginbtClick();">로그인</button>
   <br><br>
 
   아직 계정이 없으신가요?<a href="#"> 회원가입</a><br>
@@ -98,4 +98,32 @@
     <script type="text/javascript" src=js/bootstrap.js></script>
 
   </body>
+
+  <script>
+function loginbtClick() {
+  //alert("success");
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', '/api/auth/login');
+  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+  xhr.onreadystatechange = function () {
+    if(xhr.readyState !== 4) return;
+    // readyState 4: 완료
+
+    if(xhr.status === 200) {
+      // status 200: 성공
+      console.log(xhr.responseText); //결과: Hello, Albert Einstein.
+      alert("success, "+xhr.responseText);
+    } else {
+      console.log('에러: ' + xhr.status);
+      alert("fail");
+    }
+
+  };
+  var username = document.getElementById("exampleInputEmail1").value;
+  var password =document.getElementById("exampleInputPassword1").value;
+
+  xhr.send('username='+username+'&password='+password); // firstName, lastName 전송
+}
+</script>
 </html>

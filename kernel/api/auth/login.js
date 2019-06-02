@@ -10,16 +10,19 @@ POST /api/auth/register
 */
 
 module.exports = (req, res) => {
+  console.log('login..');
+
   const {username, password} = req.body;
   const secret = req.app.get('jwt-secret');
 
   var user = User.get()[username];
   if(!user){
-    //console.log(req.body);
+    console.log(req.body);
 
     throw new Error('login faild');
   }
   if(user['password'] != password){
+    //console.log(req.body);
     //console.log('bb');
     throw new Error('login faild');
   }

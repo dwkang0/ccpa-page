@@ -24,18 +24,17 @@ app.use(bodyParser.json());
 //set jwt and jwt key
 app.set('jwt-secret', config.secret);
 
-app.set('views', __dirname);
+app.set('views', '.');
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
+app.use(express.static('.'));
+app.get('/', require('./page'));
 app.use('/api', require('./api'));
 
 var server = app.listen(config.port, function(){
   console.log("Express server has started on port "+config.port);
 });
-
-app.use(express.static('.'));
-
 //var router = require(__dirname+'/router/main')(app, fs);
 // const router = express.Router();
 // const controller = require
