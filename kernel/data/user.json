@@ -7,8 +7,12 @@
 		"password": "second_pass",
 		"name": "betty"
 	},
-	"newuser": {
-		"password": "newpass",
-		"name": "charlie"
+	"newuser3": {
+		"name": "charlsfsfgie",
+		"password": "gfd"
+	},
+	"sdfgh": {
+		"name": "charlsfsfgie",
+		"password": "gfd"
 	}
 }

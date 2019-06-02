@@ -55,8 +55,10 @@ module.exports = function(app, fs)
       JSON.stringify(users, null, '\t'), "utf8", function(err, data){
         result={'success' : 1};
         res.json(result);
+        //console.log('the end');
       });
     });
+    //console.log('func end');
   });
 
 }
