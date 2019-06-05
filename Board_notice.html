@@ -14,7 +14,7 @@
 
   </style>
   <body>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-sticky">
       <a class = "navbar-brand" href="#">
         <img src="logo/작은.png" alt="Logo" height="30px">
        </a>
@@ -25,14 +25,14 @@
 
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <li class="nav-item active">
-          <a class="nav-link" href="#">메인</a>
+          <a class="nav-link" href="main.html">메인</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id ="navbardrop" data-toggle="dropdown">게시판</a>
           <div class="dropdown-menu">
             <h5 class ="dropdown-header">CCPA 공식 게시판</h5>
-            <a class ="dropdown-item" href="#">자유 게시판</a>
-            <a class ="dropdown-item" href="#">공지사항 게시판</a>
+            <a class ="dropdown-item" href="board_free.html">자유 게시판</a>
+            <a class ="dropdown-item" href="Board_notice.html">공지사항 게시판</a>
             <a class ="dropdown-item" href="#">자료 공유 게시판</a>
             <h5 class ="dropdown-header">회원 전용 게시판</h5>
             <a class= "dropdown-item" href="#">준비중!</a>
@@ -77,16 +77,21 @@
 
 
 <br>
-    <div class="container">
+    <div class="container mb-4">
+      <div class="display-4">
+  <br>
+        <p>공지사항 게시판</p>
+      </div>
+
+    <div class="container mb-4">
       <div class="jumbotron">
-    <p><h1>게시판<small>  test</small></h1><p>
-      <p><lead>CCPA 공식사이트의 게시판 테스트 입니다. <br>아직 전부 완성되지 않았습니다.<br>아 힘들다.  지방자치단체는 주민의 복리에 관한 사무를 처리하고 재산을 관리하며, 법령의 범위안에서 자치에 관한 규정을 제정할 수 있다.  </lead></p>
+      <p><lead>CCPA 공식사이트의 공지사항 게시판입니다.<br>CCPA의 공지사항이 올라오므로 정독하시어 불이익이 없기를 바랍니다.<br>사용권한 : 관리자 </lead></p>
       <button type="button" class="btn btn-primary" name ="button">글 작성하기
         <span>
       </button>
   </div>
 </div>
-<div class="container"
+<div class="container mb-4">
   <br>
     <table class="table table-hover">
       <thead>
@@ -164,6 +169,7 @@
           <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/fontawesome.js" integrity="sha384-Ia7KZbX22R7DDSbxNmxHqPQ15ceNzg2U4h5A8dy3K47G2fV1k658BTxXjp7rdhXa" crossorigin="anonymous"></script>
 </div>
 </div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
   </body>

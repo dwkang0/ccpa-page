@@ -1,0 +1,18 @@
+/* 아마도 MAIN에서만 사용될 CSS */
+.jumbotron {
+  background-size: cover;
+  background-position: center; background-color: #FF6A3F
+}
+.hcontainer {
+  padding-top:60px;
+}
+
+.text-white{
+  color:#fff
+}
+.text-white-big{
+  color:#fff
+  text-size:2rem
+
+
+}
