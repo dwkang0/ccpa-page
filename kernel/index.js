@@ -28,9 +28,9 @@ app.set('views', '.');
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
-app.use(express.static('.'));
-app.get('/', require('./page'));
+app.use(express.static('./pages'));
 app.use('/api', require('./api'));
+app.use('/', require('./page'));
 
 var server = app.listen(config.port, function(){
   console.log("Express server has started on port "+config.port);
