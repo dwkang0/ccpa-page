@@ -13,6 +13,15 @@ const fs =  require("fs");
 
 //load config
 var config = require('./config.js');
+//init firebase sdk
+var admin = require("firebase-admin");
+
+var serviceAccount = require("./../firebase_data/firebase-adminsdk.json");
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://ccpa-page.firebaseio.com"
+});
 
 //make app
 const app = express();
